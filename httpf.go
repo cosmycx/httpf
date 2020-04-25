@@ -4,15 +4,15 @@ import (
 	"net/http"
 ) // .import
 
-// Httpf  ..
-type Httpf struct {
+// Server ..
+type Server struct {
 	Address string
 	Router  *http.ServeMux
 } // .Httpf
 
-// StartServer ..
-func (hf *Httpf) StartServer() error {
+// Start ..
+func (hf *Server) Start() error {
 
 	return http.ListenAndServe(hf.Address, hf.Router)
 
-} // .StartServer
+} // .Start
